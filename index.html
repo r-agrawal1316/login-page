@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="center">
+        <h1>Login</h1>
+        <form method="post" action="" onsubmit="return true">
+            <div class="txt-field">
+                <input type="text" name="Username" id="Username" required>
+                <span></span>
+                <label>Username/Email</label>
+            </div>
+            <div class="txt-field">
+                <input type="password" name="Password" id="Password" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <br>
+            <div class="pass"><a href="/forgotPassword">Forgot Password?</a></div>
+            <input type="submit" value="Login">
+            <div class="signup_link">
+                Not a member? <a href="/SignUp">SignUp</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let hamburger = document.querySelector(".hamburger")
+
+        hamburger.addEventListener("click", () => {
+            let navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active")
+            let line1 = document.querySelector(".line1");
+            line1.classList.toggle("single-line")
+            let line2 = document.querySelector(".line2");
+            line2.classList.toggle("single-line")
+        })
+    </script>
+</body>
+
+</html>
